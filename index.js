@@ -76,7 +76,7 @@ const store = {
     ]
   };
   
-  console.log(store);
+  console.log("store: ", store);
   
   // Each section needs it's own for loop
   // DO NOT change any of the code
@@ -255,7 +255,7 @@ const store = {
   
   // An object that represents an "iPad Mini"
 
-  const iPadMini = null;
+  let iPadMini = null;
 
   for (let i = 0; i < products.length; i++) {
     const product = products[i];
@@ -281,13 +281,11 @@ const store = {
       console.log(product);
 
       const stockedProduct = product.stock.quantity;
-      console.log(products.stock.quantity);
+      console.log(stockedProduct);
 
       console.log("iteration #", i + 1)
 
-    if (stockedProduct) {
-        totalQuantityOfStock = stockedProduct;
-    }
+     totalQuantityOfStock = totalQuantityOfStock + stockedProduct     
   }
   console.log("totalQuantityOfStock: ", totalQuantityOfStock);
   
